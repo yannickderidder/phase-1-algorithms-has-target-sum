@@ -1,15 +1,45 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+function hasTargetSum(arr, target) {
+  const complementSet = new Set();
+
+  for (let num of arr) {
+    const complement = target - num;
+    if (complementSet.has(complement)) {
+      return true;
+    }
+    complementSet.add(num);
+  }
+
+  return false;
+}
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
 
+module.exports = hasTargetSum;
+function hasTargetSum(arr, target) {
+  const complementSet = new Set();
+
+  for (let num of arr) {
+    const complement = target - num;
+    if (complementSet.has(complement)) {
+      return true;
+    }
+    complementSet.add(num);
+  }
+
+  return false;
+}
 /* 
   Add your pseudocode here
 */
 
+
+module.exports = hasTargetSum;
 /*
   Add written explanation of your solution here
 */
